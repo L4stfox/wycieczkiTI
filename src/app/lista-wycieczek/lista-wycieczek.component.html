@@ -1,0 +1,51 @@
+<div class="container">
+    <div *ngFor="let wycieczka of Wycieczki">
+        <div class="overview-container-image-size">
+                <div class="tabelka">
+                      <div class="wiersz">
+                        <div class ="Informacje">Data: </div>
+                        <span class="dane">{{wycieczka.data}}</span>
+                      </div>
+
+                        <div class="wiersz">
+                        <div class ="Informacje">Miejsce startowe: </div>
+                        <span class="dane">{{wycieczka.miejsce_Start}}</span>
+                      </div>
+
+                      <div class="wiersz">
+                        <div class ="Informacje">Miejsce docelowe: </div>
+                        <span class="dane">{{wycieczka.miejsce_Docelowe}}</span>
+                      </div>
+
+                      <div class="wiersz">
+                        <div class ="Informacje">Ilość kilometrów: </div>
+                        <span class="dane">{{wycieczka.ilosc_Km}}</span>
+                      </div>
+
+                      <div class="wiersz">
+                        <div class ="Informacje">Ile dni: </div>
+                        <span class="dane">{{wycieczka.liczba_Dni}}</span>
+                      </div>
+
+                      <div>
+                      <div class="wiersz">
+                        <div class ="Informacje">Zdjęcia: </div>
+                        <span class="dane">{{wycieczka.url_Zdj}}</span>
+                        <div *ngFor="let zdj of Wycieczki" ><img src={{zdj.url_Zdj}}></div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="wiersz">
+                        <div class ="Informacje">Film: </div>
+                        <span class="dane">{{wycieczka.url_Filmu}}</span>
+                      </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="inner-outlet">
+    <router-outlet></router-outlet>
+</div>

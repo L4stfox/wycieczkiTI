@@ -1,0 +1,49 @@
+<form>
+    <div class="container">
+      <h1>Dodaj Wycieczkę</h1>
+      <div class="tabelka">
+        <div class="wiersz">
+          <strong>Data: </strong>
+          <input type="text" class="wpisywanie" [(ngModel)]="wycieczka.data" [ngModelOptions]="{standalone: true}"/>
+        </div>
+
+        <div class="wiersz">
+          <strong>Miejsce startowe: </strong>
+          <input type="text" class="wpisywanie" [(ngModel)]="wycieczka.miejsce_Start"[ngModelOptions]="{standalone: true}"/>
+        </div>
+
+        <div class="wiersz">
+          <strong>Miejsce docelowe: </strong>
+          <input type="text" class="wpisywanie" [(ngModel)]="wycieczka.miejsce_Docelowe"[ngModelOptions]="{standalone: true}"/>
+        </div>
+
+        <div class="wiersz">
+          <strong>Ilość kilometrów: </strong>
+          <input type="number" class="wpisywanie" [(ngModel)]="wycieczka.ilosc_Km"[ngModelOptions]="{standalone: true}"/>
+        </div>
+
+        <div class="wiersz">
+          <strong>Ile dni: </strong>
+          <input type="number" class="wpisywanie" [(ngModel)]="wycieczka.liczba_Dni"[ngModelOptions]="{standalone: true}"/>
+         </div>
+
+        <strong>Zdj: </strong>
+        <input type="file" *ngIf="widac" class="wpisywanie" (change)="onPhotoChange($event)" [(ngModel)]="zdjecia.urlzdjecia"[ngModelOptions]="{standalone: true}"/>
+        <div class="wiersz" *ngFor='let url of urls'>
+        <img [src]="url" class="zdj"></div>
+
+        <div class="wiersz">
+          <strong>Url filmu: </strong>
+          <input type="file" class="wpisywanie" [(ngModel)]="wycieczka.Url_Filmu"[ngModelOptions]="{standalone: true}"/>
+        </div>
+
+
+    <button (click)="onSubmit()" class ="button">Dodaj wycieczkę</button>
+  </div>
+
+  </div>
+
+</form>
+<div class="inner-outlet">
+  <router-outlet></router-outlet>
+</div>

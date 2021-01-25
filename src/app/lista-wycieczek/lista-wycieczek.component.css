@@ -1,0 +1,40 @@
+.container {
+  background:#ffffff;
+  width: 100%;
+  height: 100%;
+  margin-top:10px;
+}
+
+.tabelka {
+  background:#222222;
+  border:1px solid #262626;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+.Informacje {
+  padding:10px 10px;
+  color:#bbbbbb;
+  font-size:24px;
+  width: 10%;
+  float: left;
+
+}
+
+.dane
+{
+  padding:10px 10px;
+  font-size: 24px;
+  background:#444444;
+  color:white;
+  float: left;
+  width: 80%;
+
+}
+.wiersz
+{
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+
